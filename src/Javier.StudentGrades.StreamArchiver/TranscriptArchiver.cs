@@ -11,8 +11,8 @@ public sealed class TranscriptArchiver : ITranscriptService
     {
         using var w = new BinaryWriter(destination, Encoding.UTF8, leaveOpen: true);
 
-        w.Write(Magic);            // file signature
-        w.Write(CurrentVersion);   // VERSION HEADER
+        w.Write(Magic);            
+        w.Write(CurrentVersion);   
 
         w.Write(transcript.Student.Id);
         w.Write(transcript.Student.Name);
