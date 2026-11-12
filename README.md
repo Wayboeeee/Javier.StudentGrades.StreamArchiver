@@ -1,5 +1,16 @@
-dotnet add package Javier.StudentGrades.StreamArchiver
+# Javier.StudentGrades.StreamArchiver
 
+Archives and restores student transcripts to a versioned binary stream, with a GPA calculator.
+
+## Installation
+
+```bash
+dotnet add package Javier.StudentGrades.StreamArchiver
+```
+
+## Usage
+
+```csharp
 using Javier.StudentGrades.StreamArchiver;
 
 var transcript = new Transcript(new Student("4", "Kurt Wayboeeee"),
@@ -16,6 +27,7 @@ using (var fs = new FileStream("transcript.bin", FileMode.Create))
 using var fs2 = new FileStream("transcript.bin", FileMode.Open);
 var restored = archiver.Restore(fs2);
 
-Console.WriteLine($"{restored.Student.Name}, GPA {GpaCalculator.CalculateGpa(restored.Grades):F2}");}
+Console.WriteLine($"{restored.Student.Name}, GPA {GpaCalculator.CalculateGpa(restored.Grades):F2}");
+```
 
-The output should be: Kurt Wayboeeee, GPA 3.5 
+Output: `Kurt Wayboeeee, GPA 3.43`
