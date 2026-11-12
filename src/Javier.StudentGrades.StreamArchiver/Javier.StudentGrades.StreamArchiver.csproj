@@ -1,9 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup>
+  <TargetFramework>net8.0</TargetFramework>
+  <PackageId>Javier.StudentGrades.StreamArchiver</PackageId>
+  <Version>1.0.0</Version>
+  <Authors>Javier</Authors>
+  <Description>Short description of what the library does.</Description>
+  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  <PackageReadmeFile>README.md</PackageReadmeFile>
+  <RepositoryUrl>https://github.com/Wayboeeee/Javier.StudentGrades.StreamArchiver</RepositoryUrl>
+  <PackageTags>students;grades;archive;stream</PackageTags>
+</PropertyGroup>
 
-  <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
-</Project>
+<ItemGroup>
+  <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+</ItemGroup>
